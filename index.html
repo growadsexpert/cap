@@ -1,0 +1,121 @@
+<!--
+Telegram Landing Page - single-file HTML
+Instructions:
+ - Replace 'profile.jpg' with your profile image URL or local file.
+ - The "Join" button already links to: https://t.me/+aDm_kgKOCok0OTNl
+ - Edit stats/texts directly in the HTML where indicated.
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Telegram Landing — Captain Jiya Style</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --card:#0f3a2f;
+      --accent1:#34d399; /* green */
+      --accent2:#f472b6; /* pink */
+      --muted:#d1e7dd;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    body{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; background:radial-gradient(circle at 10% 10%, rgba(255,255,255,0.02), transparent 10%), radial-gradient(circle at 90% 90%, rgba(255,255,255,0.01), transparent 10%), #050505; color:#fff; -webkit-font-smoothing:antialiased}
+    .container{max-width:520px;margin:18px auto;padding:18px}
+    .profile{display:flex;flex-direction:column;align-items:center;text-align:center}
+    .avatar{width:116px;height:116px;border-radius:999px;padding:6px;background:linear-gradient(90deg,var(--accent1),var(--accent2));display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,0.6)}
+    .avatar img{width:100%;height:100%;border-radius:999px;display:block;object-fit:cover}
+    h1{margin:12px 0 6px;font-size:32px;letter-spacing:0.2px}
+    .sub{color:#cfead8;font-weight:700;margin-bottom:12px}
+
+    .badges{display:flex;gap:10px;justify-content:center;margin-bottom:14px}
+    .pill{padding:8px 16px;border-radius:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:2px solid rgba(255,255,255,0.04);font-weight:700}
+    .pill.premium{background:linear-gradient(90deg,#111827,#063b2c);border:2px solid rgba(255,215,0,0.12)}
+    .pill.live{background:linear-gradient(90deg,#7f1d1d,#ef4444);border:2px solid rgba(255,255,255,0.04)}
+
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}
+    .stat{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);text-align:center}
+    .stat .big{font-size:22px;font-weight:800}
+    .stat .label{font-size:13px;color:#cfead8;margin-top:6px}
+
+    .join{display:block;text-decoration:none;padding:14px;border-radius:14px;text-align:center;font-weight:800;font-size:18px;margin:12px 0;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#051411;box-shadow:0 8px 30px rgba(0,0,0,0.5)}
+
+    .icons{display:flex;gap:12px;justify-content:center;margin:12px 0}
+    .iconbox{width:58px;height:58px;border-radius:12px;background:var(--glass);display:grid;place-items:center;border:1px solid rgba(255,255,255,0.03)}
+
+    .feature{background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.2));padding:12px;border-radius:12px;margin:10px 0;border:1px solid rgba(255,255,255,0.03)}
+    .feature h3{margin:0 0 6px;font-size:15px}
+    .feature p{margin:0;color:#dbe7d7;font-size:14px}
+
+    .footer{font-size:13px;color:#9fd3b8;text-align:center;margin-top:18px}
+
+    /* responsive */
+    @media (max-width:420px){.stats{grid-template-columns:repeat(1,1fr)}h1{font-size:26px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile">
+      <div class="avatar">
+        <!-- replace profile.jpg with your image -->
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD"+""+"" alt="Profile">
+      </div>
+      <h1 id="name">Captain Jiya</h1>
+      <div class="sub">👥 10k+ Active Members</div>
+
+      <div class="badges">
+        <div class="pill premium">🏆 Premium Analyst</div>
+        <div class="pill live">⚡ Live Updates</div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="big" id="tips">98,923</div>
+        <div class="label">Match Tips</div>
+      </div>
+      <div class="stat">
+        <div class="big" id="winrate">96%</div>
+        <div class="label">Win Rate</div>
+      </div>
+      <div class="stat">
+        <div class="big" id="rating">4.9 ★</div>
+        <div class="label">Rating</div>
+      </div>
+    </div>
+
+    <a class="join" href="https://t.me/+aDm_kgKOCok0OTNl" target="_blank" rel="noopener noreferrer">✈️ Join Telegram Channel</a>
+
+    <div class="icons">
+      <div class="iconbox">✅</div>
+      <div class="iconbox">🔒</div>
+      <div class="iconbox">📈</div>
+      <div class="iconbox">⭐</div>
+    </div>
+
+    <div class="feature">
+      <h3>✅ Pre-match Predictions</h3>
+      <p>Daily expert analysis before matches start with high win rate predictions.</p>
+    </div>
+
+    <div class="feature">
+      <h3>🔥 Transparent Results</h3>
+      <p>Full historical records of all predictions with verified outcomes.</p>
+    </div>
+
+    <div class="footer">© 2024 Aakesh Kohli. All rights reserved. • Professional Cricket Analysis & Predictions</div>
+  </div>
+
+  <!-- Optional small script to let you customize values from URL params or console -->
+  <script>
+    // Example: change name or stats quickly
+    // document.getElementById('name').textContent = 'Your Name';
+    // document.getElementById('tips').textContent = '12,345';
+    // document.getElementById('winrate').textContent = '88%';
+    // document.getElementById('rating').textContent = '4.8 ★';
+  </script>
+</body>
+</html>
